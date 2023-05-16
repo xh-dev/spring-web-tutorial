@@ -52,5 +52,10 @@ public class SomeController {
         }
     }
 
+    @GetMapping("/error")
+    public Item error() {
+        throw new RuntimeException("This is a test exception");
+    }
+
 
 }
