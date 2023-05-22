@@ -11,3 +11,4 @@ spring:
       hibernate:
         jdbc:
           batch_size: 200
+    database-platform: org.hibernate.dialect.MySQL8Dialect
