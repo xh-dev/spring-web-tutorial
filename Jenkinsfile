@@ -8,7 +8,7 @@ pipeline {
         stage('build') {
             agent any
             steps {
-                sh 'printenv'
+//                 sh 'printenv'
 //                 sh 'sed -i "s|{branch}|${BRANCH_NAME}|g" ./data/GitMeta.yaml'
 //                 sh 'sed -i "s|{version}|$(echo "$GIT_COMMIT"| cut -c1-6)|g" ./data/GitMeta.yaml'
 //                 sh 'cat ./data/GitMeta.yaml'
