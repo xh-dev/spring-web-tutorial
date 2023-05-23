@@ -5,31 +5,16 @@ pipeline {
 //       ip=credentials('ip-xethh-me')
 //     }
     stages {
-        // stage('Build') {
-        //     agent {
-        //         docker { image 'xethhung/docker-hugo:latest' }
-        //     }
-        //     steps {
-        //         sh 'hugo'
-        //         sh 'ls -al'
-        //     }
-        // }
         stage('build') {
             agent any
             steps {
                 sh 'printenv'
-            }
-        }
-//         stage('build') {
-//             agent any
-//             steps {
-//                 sh 'printenv'
 //                 sh 'sed -i "s|{branch}|${BRANCH_NAME}|g" ./data/GitMeta.yaml'
 //                 sh 'sed -i "s|{version}|$(echo "$GIT_COMMIT"| cut -c1-6)|g" ./data/GitMeta.yaml'
 //                 sh 'cat ./data/GitMeta.yaml'
-//                 sh 'docker build -t xethhung/my-blog:latest .'
-//             }
-//         }
+                sh 'docker build -t xethhung/test-app:latest .'
+            }
+        }
 //         stage('publish') {
 //             agent any
 //             steps {
