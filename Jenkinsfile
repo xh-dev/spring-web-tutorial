@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    environment {
+//     environment {
 //       dockerhub=credentials('jenkins-docker-login')
 //       ip=credentials('ip-xethh-me')
-    }
+//     }
     stages {
         // stage('Build') {
         //     agent {
